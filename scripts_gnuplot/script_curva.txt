@@ -1,0 +1,13 @@
+reset
+set title " Servidor TCP"
+set xlabel "Tempo(seg)" 
+set ylabel "Mbits/seg"
+set xtics (1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60)
+set xrange [1:60]
+set yrange [0:11]
+set nokey 
+set key box 
+set term post eps enhanced color 
+set terminal png 
+set output 'curva.png' 
+plot 'servidor_tcp3.dat' u ($1):($2) with lines lt 10 lw 2 title "Bandwidth"

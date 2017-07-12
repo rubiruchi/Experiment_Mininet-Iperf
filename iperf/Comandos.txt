@@ -1,0 +1,16 @@
+Iperf cliente TCP: iperf -c ip -t 60 -i 1
+
+-t n (Tempo da geração da carga)
+-i n (Relatório a cada n segundos)
+
+iperf servidor UDP: iperf -s 
+
+-s (modo servidor)
+
+Iperf cliente UDP: iperf -c ip -u -n 1G -i 1 -b 10M
+
+-n n (Tamanho da carga)
+-b n (Largura de banda)
+-u (Cliente UDP)
+
+Iperf servidor UDP: iperf -s -u
